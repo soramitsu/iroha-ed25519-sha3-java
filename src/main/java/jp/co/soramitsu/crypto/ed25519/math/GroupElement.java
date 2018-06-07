@@ -606,10 +606,10 @@ public class GroupElement implements Serializable {
      * up to a common factor -1 which does not matter:
      * <p>
      * $$
-     * B = (X + Y)^2; C = X^2; D = Y^2; E = -C = -X^2; F := E + D = Y^2 - X^2; H = Z^2; J = F − 2 * H; \\
-     * X3 = (B − C − D) · J = X' * (-T'); \\
-     * Y3 = F · (E − D) = Z' * (-Y'); \\
-     * Z3 = F · J = Z' * (-T').
+     * B = (X + Y)^2; C = X^2; D = Y^2; E = -C = -X^2; F := E + D = Y^2 - X^2; H = Z^2; J = F - 2 * H; \\
+     * X3 = (B - C - D) * J = X' * (-T'); \\
+     * Y3 = F * (E - D) = Z' * (-Y'); \\
+     * Z3 = F * J = Z' * (-T').
      * $$
      *
      * @return The P1P1 representation
