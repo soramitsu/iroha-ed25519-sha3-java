@@ -1,10 +1,16 @@
 language: java
-
 jdk:
-  - oraclejdk9
-  - oraclejdk8
-  - openjdk8
-
+- oraclejdk9
+- oraclejdk8
+- openjdk8
 script:
-  - ./gradlew assemble
-  - ./gradlew check
+- "./gradlew assemble"
+- "./gradlew check"
+deploy:
+  provider: bintray
+  file: descriptor.json
+  user: warchant
+  key:
+    secure: d8v5HF1JMqQzAhVWnMkcc1eQr9aA540ab7zzeiDjAx1x6UOjR9egWqZpZVbaK9G/kWvHz4yavXv6GTX15J8HyRghBOfh3osPkAN9eXxArJsFBxpDZpKc/qvMExduJJrslPvgMyhliuLakupJQUplNnTuPOGaRyUDqH+7DgkqRq+RsbnyN4quVN7BXAx+4o6TVoF5pCnXz/zl1KsaqxWiz+U+E0BYMW7Z7ZoPCkSAaOxugCX9uizDg8H7aezY5Z/F9heqAVdVJdjrZouKQvI+IBrprVhhCSczZXNomBOMxUuuXzdBY0BIEfePKat+21qVMUFxgF1XSP2/IhGUTEgKEsO0MkEtk5ryc4pf09vlHl518O1TX0XOJHEUPpKDHgDoS1hS7lPbD/jwxTMhz/w8k6gXEO4KwTBQ9cnE+2NFJeCkGDNG28J+GMQVHPBgs5lcNqMb83JTImnzgEqXsoQUjVMJwONKK3fHrWkF+uFKijT1hIjnvvgSHWt0yWwP7EUg6jE374kEycqlg4wcS8auejH903Z8ihI0CSf5svWWEBpbjDDtw7DmhkRw/vEkdRe2sfGHpe/iCvNlxYL7fz+8mH4ph3VMLrTYx/m1x7uou+8vjvw1JK4/oVoW81yU6B4zkOKGeK9PpUDqsIyXTVlkTA05sQEMR3soVmHv+oinIXM=
+  skip_cleanup: true
+  on: master
